@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import LoadParagraph from "./LoadParagraph";
 import HandleKeyDown from "./HandleKeyDown";
+import TypingProcess from "./TypingProcess";
 
 const SpeedTypingTracker = () => {
     const [inputFieldValue, setInputFieldValue] = useState('');
@@ -38,6 +39,19 @@ const SpeedTypingTracker = () => {
             setCharIndex = {setCharIndex}
             mistakes = {mistakes}
             maxTime = {maxTime}
+            setCPM = {setCPM}
+            setWPM = {setWPM}
+        />
+
+        <TypingProcess 
+            maxTime = {maxTime}
+            timeLeft = {timeLeft}
+            mistakes = {mistakes}
+            charIndex = {charIndex}
+            isTyping = {isTyping}
+            setIsTyping = {setIsTyping}
+            setCharIndex = {setCharIndex}
+            setMistakes = {setMistakes}
             setCPM = {setCPM}
             setWPM = {setWPM}
         />
